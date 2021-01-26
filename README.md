@@ -21,3 +21,12 @@
 - Search for `Enviroment Variable` on your machine > click `Environment Variables...` on User variables for "your-user" highlight `Path` click `New` type into the field `%USERPROFILE%\bin` click `OK` then `OK` then `OK` to exit Environment Variables.
 - Open a new PowerShell and type `terraform` to check if Terraform was inserted into your Path correctly. 
 ![installing_terraform_windows](/assets/installing_terraform_windows.gif)
+
+## Create AWS IAM user
+- Login to AWS 
+- Click `Users` on Dashboard then `Add user`
+- Insert a username. Example `terraform`
+-  Select AWS access type `Programmatic access`
+-  Go next select `Attach existing policies directly` then check `AdministratorAccess`  *this is bad practice and should be avoided if you know what policies to assign your username to use terraform*
+-  Click Next and Review
+-  Download the .CSV file containing the credentials
