@@ -23,10 +23,23 @@
 ![installing_terraform_windows](/assets/installing_terraform_windows.gif)
 
 ## Create AWS IAM user
-- Login to AWS 
+---
+- Login to [AWS Account](https://aws.amazon.com/account/)
 - Click `Users` on Dashboard then `Add user`
 - Insert a username. Example `terraform`
 -  Select AWS access type `Programmatic access`
 -  Go next select `Attach existing policies directly` then check `AdministratorAccess`  *this is bad practice and should be avoided if you know what policies to assign your username to use terraform*
 -  Click Next and Review
 -  Download the .CSV file containing the credentials
+
+## Creating Config file using the credentials csv file
+---
+- Open credential file from previous step and edit using vscode
+- Delete the first line containing headings
+- Delete username comma and password field
+- Delete the website at the end
+- Add `[default]` at the beginning of the file
+- Add before Access key ID `aws_access_key_id=`
+- Add before Secret access key `aws_secret_access_key=`
+- Save as **credentials** into C:\Users\"username"\aws  *credentials file has no extension so make sure it don't have via the command line*
+![credentials example](/assets/credentails.png)
