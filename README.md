@@ -20,4 +20,4 @@
 - Extract the file into `C:\Users\"you-user"\bin`
 - Search for `Enviroment Variable` on your machine > click `Environment Variables...` on User variables for "your-user" highlight `Path` click `New` type into the field `%USERPROFILE%\bin` click `OK` then `OK` then `OK` to exit Environment Variables.
 - Open a new PowerShell and type `terraform` to check if Terraform was inserted into your Path correctly. 
-![installing_terraform_windows](https://github.com/jhabboubi/terraform/blob/main/assets/installing_terraform_windows.gif)
+![installing_terraform_windows](/assets/installing_terraform_windows.gif)
