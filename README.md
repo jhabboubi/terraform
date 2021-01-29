@@ -18,6 +18,7 @@
 - Search for `Enviroment Variable` on your machine > click `Environment Variables...` on User variables for "your-user" highlight `Path` click `New` type into the field `%USERPROFILE%\bin` click `OK` then `OK` then `OK` to exit Environment Variables.
 - Open a new PowerShell and type `terraform` to check if Terraform was inserted into your Path correctly. 
 ![installing_terraform_windows](/assets/installing_terraform_windows.gif)
+- Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/terraform/install-cli) 
 
 ## Create AWS IAM use
 - Login to [AWS Account](https://aws.amazon.com/account/)
