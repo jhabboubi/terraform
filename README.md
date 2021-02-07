@@ -1,5 +1,14 @@
 # Terraform
 
+# Table of Content:
+- [Requirements](#requirements)
+- [What is Terraform?](#what-is-terraform)
+- [Installing Terraform](#installing-terraform)
+- [Create AWS IAM use](#create-aws-iam-use)
+- [Creating Config file using the credentials csv file](#creating-config-file-using-the-credentials-csv-file)
+- [Init git working directory](#init-git-working-directory)
+
+
 ## Requirements
 - [AWS Account](https://aws.amazon.com/account/)
 - Git
