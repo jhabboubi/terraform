@@ -24,6 +24,8 @@
 - Provision, manage, and maintain cloud resources like servers, networking, storage. 
 - Terraform is for managing the base infrastructure *Not a configuration Management System*
 - Terraform works with Docker, Kubernetes, Cloud. 
+![terraformexecution](/assets/terraformexecutionplan.png)
+![terraformflow](/assets/terraformflow.png)
  
 
 ## Installing Terraform - Windows
