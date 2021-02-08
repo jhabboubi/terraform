@@ -8,7 +8,6 @@
 - [Create AWS IAM use](#create-aws-iam-use)
 - [Creating Config file using the credentials csv file](#creating-config-file-using-the-credentials-csv-file)
 - [Init git working directory](#init-git-working-directory)
-- [Add terraform to .gitignore](#add-terraform-to-gitignore-important-security-mesurement)
 
 
 
@@ -60,15 +59,18 @@
 - `mv new_user_credentials.csv credentials`
 
 ## Init git working directory
-- Open GitBash and type command `mkdir ~/Desktop/tf_code`
-- `cd ~/Desktop/tf_code` then init git by `git init`
+- Open GitBash and type command `mkdir ~/Desktop/terraform`
+- `cd ~/Desktop/terraform` then init git by `git init`
 - Create file first_code.tf by command `vim first_code.tf`
 ![first_code](/assets/first_code.png)
-- `git add *` then `git commit -m "init commit and config file"` then `git push`
+- Add terraform to .gitignore (Important security mesurement) 
+    - .gitignore can be downloaded or forked from this repo
+    - Contains windows/linux/mac/terraform
+    - Create your own via [Toptal](https://www.toptal.com/developers/gitignore)
+- `git add *` then `git commit -m "init commit and config file"`
+- `terraform init`  
+![terraform_init](/assets/terraform_init.png)
+- `git push`
 
-## Add terraform to .gitignore (Important security mesurement) 
-- .gitignore can be downloaded or forked from this repo
-- Contains windows/linux/mac/terraform
-- Create your own via [Toptal](https://www.toptal.com/developers/gitignore)
 
 
