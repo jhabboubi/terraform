@@ -55,8 +55,9 @@
 - Add `[default]` at the beginning of the file
 - Add before Access key ID `aws_access_key_id=`
 - Add before Secret access key `aws_secret_access_key=`
-- Save as **credentials** into C:\Users\"username"\aws  *credentials file has no extension so make sure it don't have via the command line*
+- Save as *credentials* into C:\Users\"username"\aws    *credentials file has no extension so make sure it don't have via the command line*
 ![credentials example](/assets/credentails.png)
+- `mv new_user_credentials.csv credentials`
 
 ## Init git working directory
 - Open GitBash and type command `mkdir ~/Desktop/tf_code`

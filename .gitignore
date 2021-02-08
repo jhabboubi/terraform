@@ -1,7 +1,8 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/macos,jekyll,windows,linux
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,jekyll,windows,linux
+# Created by https://www.toptal.com/developers/gitignore/api/macos,jekyll,windows,linux,terraform
 
+# aws credentials
+credentials
 ### Terraform ###
 # Local .terraform directories
 **/.terraform/*
