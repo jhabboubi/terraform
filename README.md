@@ -24,8 +24,8 @@
  
 ## Installing Terraform - Windows
 - Visit [Terraform Download CLI](https://www.terraform.io/downloads.html) > choose the operating system.
-- Choose folder to download in `C:\Users\"youruser"\bin`    *create bin folder if not available*
-- Extract the file into `C:\Users\"youruser"\bin`
+- Choose folder to download in `%USERPROFILE%\bin`    *create bin folder if not available*
+- Extract the file into `%USERPROFILE%\bin`
 - Search for `Enviroment Variable` on your machine > click `Environment Variables...` on User variables for "your-user" highlight `Path` click `New` type into the field `%USERPROFILE%\bin` click `OK` then `OK` then `OK` to exit Environment Variables.
 - Open a new PowerShell and type `terraform` to check if Terraform was inserted into your Path correctly. 
 ![installing_terraform_windows](/assets/installing_terraform_windows.gif)
@@ -54,7 +54,7 @@
 - Add `[default]` at the beginning of the file
 - Add before Access key ID `aws_access_key_id=`
 - Add before Secret access key `aws_secret_access_key=`
-- Save as *credentials* into C:\Users\"username"\aws    *credentials file has no extension so make sure it don't have via the command line*
+- Save in `%USERPROFILE%\.aws\credentials`    *credentials file has no extension so make sure it don't have via the command line*
 ![credentials example](/assets/credentails.png)
 - `mv new_user_credentials.csv credentials`
 
@@ -63,6 +63,7 @@
 - `cd ~/Desktop/terraform` then init git by `git init`
 - Create file first_code.tf by command `vim first_code.tf`
 ![first_code](/assets/first_code.png)
+- To change the default location of the credentials file use `shared_credentials_file = "credentials path"` beneath `region = "us-west-2"` in `first_code.tf` file
 - Add terraform to .gitignore (Important security mesurement) 
     - .gitignore can be downloaded or forked from this repo
     - Contains windows/linux/mac/terraform
