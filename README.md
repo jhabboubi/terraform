@@ -86,4 +86,4 @@
 ## Terraform apply
 - executing `terraform apply` will generate a plan and prompt to execute.
 ![commandline](/assets/terraformapply.png)
-![amazon_account](/assets/amazonterraformapplu.png) 
+![amazon_account](/assets/amazonterraformapply.png)
