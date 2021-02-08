@@ -20,7 +20,7 @@
 - Terraform is for managing the base infrastructure *Not a configuration Management System*
 - Terraform works with Docker, Kubernetes, Cloud. 
  
-## Installing Terraform
+## Installing Terraform (Windows)
 - Visit [Terraform Download CLI](https://www.terraform.io/downloads.html) > choose the operating system.
 - Choose folder to download in `C:\Users\"youruser"\bin`    *create bin folder if not available*
 - Extract the file into `C:\Users\"youruser"\bin`
@@ -28,6 +28,12 @@
 - Open a new PowerShell and type `terraform` to check if Terraform was inserted into your Path correctly. 
 ![installing_terraform_windows](/assets/installing_terraform_windows.gif)
 - Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/terraform/install-cli) 
+## Installing Terraform (Linux)
+- `wget https://releases.hashicorp.com/terraform/0.14.6/terraform_0.14.6_linux_amd64.zip`   *64-bit*  [Terraform Download CLI](https://www.terraform.io/downloads.html)
+- `unzip terraform_0.14.6_linux_amd64.zip`
+- `sudo mv terraform /bin`
+- `rm terraform_0.14.6_linux_amd64.zip`
+- `terraform --version`
 
 ## Create AWS IAM use
 - Login to [AWS Account](https://aws.amazon.com/account/)
