@@ -2,11 +2,14 @@
 
 # Table of Content:
 - [Requirements](#requirements)
-- [What is Terraform?](#what-is-terraform)
-- [Installing Terraform](#installing-terraform)
+- [What is Terraform?](#what-is-terraform-(windows))
+- [Installing Terraform Windows](#installing-terraform---windows)
+- [Installing Terraform - Linux](#installing-terraform---linux)
 - [Create AWS IAM use](#create-aws-iam-use)
 - [Creating Config file using the credentials csv file](#creating-config-file-using-the-credentials-csv-file)
 - [Init git working directory](#init-git-working-directory)
+- [Add terraform to .gitignore](#add-terraform-to-gitignore-important-security-mesurement)
+
 
 
 ## Requirements
@@ -20,7 +23,7 @@
 - Terraform is for managing the base infrastructure *Not a configuration Management System*
 - Terraform works with Docker, Kubernetes, Cloud. 
  
-## Installing Terraform (Windows)
+## Installing Terraform - Windows
 - Visit [Terraform Download CLI](https://www.terraform.io/downloads.html) > choose the operating system.
 - Choose folder to download in `C:\Users\"youruser"\bin`    *create bin folder if not available*
 - Extract the file into `C:\Users\"youruser"\bin`
@@ -28,7 +31,7 @@
 - Open a new PowerShell and type `terraform` to check if Terraform was inserted into your Path correctly. 
 ![installing_terraform_windows](/assets/installing_terraform_windows.gif)
 - Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/terraform/install-cli) 
-## Installing Terraform (Linux)
+## Installing Terraform - Linux
 - `wget https://releases.hashicorp.com/terraform/0.14.6/terraform_0.14.6_linux_amd64.zip`   *64-bit*  [Terraform Download CLI](https://www.terraform.io/downloads.html)
 - `unzip terraform_0.14.6_linux_amd64.zip`
 - `sudo mv terraform /bin`
@@ -61,3 +64,10 @@
 - Create file first_code.tf by command `vim first_code.tf`
 ![first_code](/assets/first_code.png)
 - `git add *` then `git commit -m "init commit and config file"` then `git push`
+
+## Add terraform to .gitignore (Important security mesurement) 
+- .gitignore can be downloaded or forked from this repo
+- Contains windows/linux/mac/terraform
+- Create your own via [Toptal](https://www.toptal.com/developers/gitignore)
+
+
