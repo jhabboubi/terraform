@@ -17,6 +17,7 @@
 - [AWS Account](https://aws.amazon.com/account/)
 - Git
 - Basics in System administration and networking basics
+- `terraform [command] --help`   **syntax for a command**
 
 
 ## What is Terraform?
@@ -40,8 +41,9 @@
 - Extract the file into `%USERPROFILE%\bin`
 - Search for `Enviroment Variable` on your machine > click `Environment Variables...` on User variables for "your-user" highlight `Path` click `New` type into the field `%USERPROFILE%\bin` click `OK` then `OK` then `OK` to exit Environment Variables.
 - Open a new PowerShell and type `terraform` to check if Terraform was inserted into your Path correctly. 
+
 ![installing_terraform_windows](/assets/installing_terraform_windows.gif)
-- Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/terraform/install-cli) 
+Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/terraform/install-cli) 
 
 
 ## Installing Terraform - Linux
@@ -95,3 +97,15 @@
 - Executing `terraform apply` will generate a plan and prompt to execute.
 ![commandline](/assets/terraformapply.png)
 ![amazon_account](/assets/amazonterraformapply.png)
+
+## Terraform plan
+- Will execute automaticatally if `terraform apply` executed
+- Plan will show each step that will be executed
+- Will check the state between your configurations and real physcial resources  
+![terraform plan](/assets/terraformplan.png)
+![terraform plan to destroy](/assets/terraformplandestroy.png)
+- Use [option] `-out=filename.plan` to generate plan and save it to a file, otherwise the plan generated might not be the same when getting to apply stage. 
+- To inspect the plan `terraform show filename.plan`   `cat filename.plan` don't work since it's a binary file 
+
+
+
