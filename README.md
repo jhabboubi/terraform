@@ -11,6 +11,7 @@
 - [Terraform apply](#terraform-apply)
 - [Terraform plan](#terraform-plan)
 - [Terraform state](#terraform-state)
+- [Terraform graph](#terraform-graph)
 
 ---
 
@@ -82,7 +83,7 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 - Create file first_code.tf by command `vim first_code.tf`
 ![first_code](/assets/first_code.png)
 - To change the default location of the credentials file use `shared_credentials_file = "credentials path"` beneath `region = "us-west-2"` in `first_code.tf` file
-- Add terraform to .gitignore (Important security mesurement) 
+- Add terraform to .gitignore (Important security measurement) 
     - .gitignore can be downloaded or forked from this repo
     - Contains windows/linux/mac/terraform
     - Create your own via [Toptal](https://www.toptal.com/developers/gitignore)
@@ -110,7 +111,6 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 
 
 ## Terraform state
-
 ![terraformexecution](/assets/terraformexecutionplan.png)  
 
 - `cat terraform.tfstate` this will show json information about the local state\ ** local state and remote state might be out of sync until terraform pull the state from the infrastructure **
@@ -119,5 +119,17 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 - Remote State is part of a feature on Terraform call `Backends` [Read more about Backends here](https://www.terraform.io/docs/language/settings/backends/index.html)
 ![terraformremote](/assets/terrafromremote.png)
 - `terraform state`  has a two handy subcommands `list` that shows a list of resources and  `show [resource]` shows a specific resource. `terraform show`  will dump all resources state. 
+
+
+## Terraform graph
+- Terraform builds a graph part of the plan and can be exported then rendered visually. 
+- `terraform graph`  **the syntax of the output is DOT**  
+![terraformgraph](/assets/terraformgraph.png)
+![DOT](/assets/DOT.png)
+
+- Visualizing DOT require a graph visualizer. Ex: [http://webgraphviz.com](http://webgraphviz.com)
+![vizgraph](/assets/graphviz.png)
+
+
 
 
