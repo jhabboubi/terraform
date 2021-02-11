@@ -1,19 +1,21 @@
 # Terraform
 
-# Table of Content:
-- [Requirements](#requirements)
-- [What is Terraform?](#what-is-terraform-(windows))
-- [Installing Terraform Windows](#installing-terraform---windows)
-- [Installing Terraform - Linux](#installing-terraform---linux)
-- [Create AWS IAM use](#create-aws-iam-use)
-- [Creating Config file using the credentials csv file](#creating-config-file-using-the-credentials-csv-file)
-- [Init git working directory](#init-git-working-directory)
-- [Terraform apply](#terraform-apply)
-- [Terraform plan](#terraform-plan)
-- [Terraform state](#terraform-state)
-- [Terraform graph](#terraform-graph)
 
----
+- [Terraform](#terraform)
+  - [Requirements](#requirements)
+  - [What is Terraform?](#what-is-terraform)
+  - [Terraform vs. Chef, Puppet, etc.](#terraform-vs-chef-puppet-etc)
+  - [Installing Terraform - Windows](#installing-terraform---windows)
+  - [Installing Terraform - Linux](#installing-terraform---linux)
+  - [Create AWS IAM use](#create-aws-iam-use)
+  - [Creating credentials file](#creating-credentials-file)
+  - [Init git working directory](#init-git-working-directory)
+  - [Terraform apply](#terraform-apply)
+  - [Terraform plan](#terraform-plan)
+  - [Terraform state](#terraform-state)
+  - [Terraform graph](#terraform-graph)
+  - [Terraform Resources](#terraform-resources)
+  - [Links](#links)
 
 
 ## Requirements
@@ -24,6 +26,7 @@
 
 
 ## What is Terraform?
+- Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.
 - Infrastructure management tool made by [HashiCorp](https://www.hashicorp.com) or open-source infrastructure as code software tool
 - Provision, manage, and maintain cloud resources like servers, networking, storage. 
 - Terraform is for managing the base infrastructure *Not a configuration Management System*
@@ -33,6 +36,14 @@
 ![terraformflow](/assets/terraformflow.png)  
 ![terraform-context-model-illustration](/assets/terraform-context-model-illustration.png)
 ![terraform-ansible](/assets/terraform-ansible.png)
+
+
+## Terraform vs. Chef, Puppet, etc.
+Configuration management tools install and manage software on a machine that already exists. Terraform is not a configuration management tool, and it allows existing tooling to focus on their strengths: bootstrapping and initializing resources.
+
+Terraform focuses on the higher-level abstraction of the datacenter and associated services, while allowing you to use configuration management tools on individual systems. It also aims to bring the same benefits of codification of your system configuration to infrastructure management.
+
+If you are using traditional configuration management within your compute instances, you can use Terraform to configure bootstrapping software like cloud-init to activate your configuration management software on first system boot.
 
 
 ## Installing Terraform - Windows
@@ -64,7 +75,7 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 -  Download the .CSV file containing the credentials
 
 
-## Creating Config file using the credentials csv file
+## Creating credentials file
 - Open credential file from previous step and edit using vscode
 - Delete the first line containing headings
 - Delete username comma and password field
@@ -74,7 +85,9 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 - Add before Secret access key `aws_secret_access_key=`
 - Save in `%USERPROFILE%\.aws\credentials`    *credentials file has no extension so make sure it don't have via the command line*
 ![credentials example](/assets/credentails.png)
-- `mv new_user_credentials.csv credentials`
+- `mv new_user_credentials.csv credentials`  
+  
+![credentialsfile](/assets/credentialsfile.png)
 
 
 ## Init git working directory
@@ -97,6 +110,8 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 - Executing `terraform apply` will generate a plan and prompt to execute.
 ![commandline](/assets/terraformapply.png)
 ![amazon_account](/assets/amazonterraformapply.png)
+- `terraform apply filename.plan` will apply without prompting yes/no **assumes you have already revised the plan**
+- `terraform apply -auto-approve`  generate plan, apply plan without prompting yes/no **use at your own risk**
 
 
 ## Terraform plan
@@ -130,6 +145,11 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 - Visualizing DOT require a graph visualizer. Ex: [http://webgraphviz.com](http://webgraphviz.com)
 ![vizgraph](/assets/graphviz.png)
 
+[Read More On Graphs Here](https://www.terraform.io/docs/cli/commands/graph.html)
 
 
+## Terraform Resources 
 
+
+## Links
+- [SaaS vs PaaS vs IaaS: What’s The Difference & How To Choose](https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/)
