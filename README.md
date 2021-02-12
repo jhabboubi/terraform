@@ -153,3 +153,5 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 
 ## Links
 - [SaaS vs PaaS vs IaaS: What’s The Difference & How To Choose](https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/)
+- [Terraform deprecated the Chef Provisioner in the 0.13.4 release](https://docs.chef.io/terraform/)
+- [Terraform Cheat Sheet](https://jayendrapatil.com/terraform-cheat-sheet/)
