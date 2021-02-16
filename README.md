@@ -180,3 +180,12 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 - [Terraform Cheat Sheet](https://jayendrapatil.com/terraform-cheat-sheet/)
 
 ## Challenges & Workarounds
+
+If `terraform validate` was successful and your apply still failed, you may be encountering a common error.
+
+- **If you use a region other than** `us-east-1`, you will also need to change your `ami`, since AMI IDs are region specific. Choose an AMI ID specific to your region by [following these instructions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#finding-quick-start-ami), and modify `*.tf` with this ID. Then re-run `terraform apply`.
+
+- **If you do not have a default VPC in your AWS account in the correct region**, navigate to the AWS VPC Dashboard in the web UI, create a new VPC in your region, and associate a subnet and security group to that VPC. Then add the security group ID (`vpc_security_group_ids`) and subnet ID (`subnet_id`) into your `aws_instance` resource, and replace the values with the ones from your new security group and subnet.
+![vpc_correct_region](/assets/VPC_correct_region.png)
+Save the changes to `*.tf`, and re-run `terraform apply`. [full article here](https://learn.hashicorp.com/tutorials/terraform/aws-build?in=terraform/aws-get-started)
+
