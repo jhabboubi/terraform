@@ -3,27 +3,40 @@
 
 - [Terraform](#terraform)
   - [Requirements](#requirements)
+  - [Infrastructure as code (IaC)](#infrastructure-as-code-iac)
   - [What is Terraform?](#what-is-terraform)
   - [Terraform vs. Chef, Puppet, etc.](#terraform-vs-chef-puppet-etc)
   - [Installing Terraform - Windows](#installing-terraform---windows)
   - [Installing Terraform - Linux](#installing-terraform---linux)
   - [Create AWS IAM use](#create-aws-iam-use)
   - [Creating credentials file](#creating-credentials-file)
-  - [Init git working directory](#init-git-working-directory)
+  - [Git init & terraform init](#git-init--terraform-init)
+  - [Format and validate the configuration](#format-and-validate-the-configuration)
+  - [Logging for Terraform](#logging-for-terraform)
   - [Terraform apply](#terraform-apply)
   - [Terraform plan](#terraform-plan)
   - [Terraform state](#terraform-state)
   - [Terraform graph](#terraform-graph)
   - [Terraform Resources](#terraform-resources)
   - [Links](#links)
+  - [Challenges & Workarounds](#challenges--workarounds)
 
 
 ## Requirements
 - [AWS Account](https://aws.amazon.com/account/)
 - Git
 - Basics in System administration and networking basics
-- `terraform [command] --help`   **syntax for a command**
+- `terraform [command] -help`   **syntax for a command**
 
+## Infrastructure as code (IaC)
+- [Introduction to Infrastructure as Code with Terraform](https://learn.hashicorp.com/tutorials/terraform/infrastructure-as-code?in=terraform/aws-get-started)
+- Advantages of Infrastructure as code
+  - Easily Repeatable
+  - Easily Readable
+  - Operational certainty with "terraform plan"
+  - Standardized environment builds
+  - Quickly provisioned development environment
+  - Disaster Recovery
 
 ## What is Terraform?
 - Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.
@@ -90,7 +103,7 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 ![credentialsfile](/assets/credentialsfile.png)
 
 
-## Init git working directory
+## Git init & terraform init
 - Open GitBash and type command `mkdir ~/Desktop/terraform`
 - `cd ~/Desktop/terraform` then init git by `git init`
 - Create file first_code.tf by command `vim first_code.tf`
@@ -104,6 +117,16 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 - `terraform init`  
 ![terraform_init](/assets/terraform_init.png)
 - `git push`
+
+
+## Format and validate the configuration
+- The `terraform fmt` command automatically updates configurations in the current directory for easy readability and consistency.
+- Terraform will return the names of the files it formatted. In the case, your configuration file was already formatted correctly, Terraform won't return any file names.
+- the built in `terraform validate` command will check and report errors within modules, attribute names, and value types.
+
+
+## Logging for Terraform
+[Instructions for Windows & Linux](https://www.phillipsj.net/posts/how-to-configure-logging-for-terraform/)
 
 
 ## Terraform apply
@@ -155,3 +178,5 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 - [SaaS vs PaaS vs IaaS: What’s The Difference & How To Choose](https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/)
 - [Terraform deprecated the Chef Provisioner in the 0.13.4 release](https://docs.chef.io/terraform/)
 - [Terraform Cheat Sheet](https://jayendrapatil.com/terraform-cheat-sheet/)
+
+## Challenges & Workarounds
