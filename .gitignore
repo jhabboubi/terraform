@@ -2,7 +2,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,jekyll,windows,linux,terraform
 #VSCODE
 .vscode
-
+#ignore outputs.tf
+outputs.tf
+private_ips.txt
 # aws credentials
 credentials
 ### Terraform ###

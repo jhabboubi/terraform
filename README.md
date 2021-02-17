@@ -18,6 +18,8 @@
   - [Terraform state](#terraform-state)
   - [Terraform graph](#terraform-graph)
   - [Terraform Resources](#terraform-resources)
+  - [Terraform Variables](#terraform-variables)
+  - [Terraform Provisioner](#terraform-provisioner)
   - [Links](#links)
   - [Challenges & Workarounds](#challenges--workarounds)
 
@@ -172,15 +174,32 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 
 
 ## Terraform Resources 
+- Building blocks of Terraform
+- Define the "what" of your infrastructure
+- Different settings for every provider
+
+[Required Providers](https://www.terraform.io/docs/language/providers/requirements.html)
+[Providers](https://registry.terraform.io/browse/providers)
+
+
+## Terraform Variables
+- [Input/output/local variables](https://www.terraform.io/docs/language/values/variables.html)
+- [Video](https://learn.hashicorp.com/tutorials/terraform/aws-variables?in=terraform/aws-get-started)
+
+
+## Terraform Provisioner
+- [Provisioners](https://www.terraform.io/docs/language/resources/provisioners/syntax.html)
 
 
 ## Links
 - [SaaS vs PaaS vs IaaS: What’s The Difference & How To Choose](https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/)
 - [Terraform deprecated the Chef Provisioner in the 0.13.4 release](https://docs.chef.io/terraform/)
 - [Terraform Cheat Sheet](https://jayendrapatil.com/terraform-cheat-sheet/)
+- [Ansible and HashiCorp: Better Together](https://www.hashicorp.com/resources/ansible-terraform-better-together) [github used in video](https://github.com/scarolan/ansible-terraform)
+- [Manage Kubernetes Resources via Terraform](https://learn.hashicorp.com/tutorials/terraform/kubernetes-provider?in=terraform/kubernetes)
+
 
 ## Challenges & Workarounds
-
 If `terraform validate` was successful and your apply still failed, you may be encountering a common error.
 
 - **If you use a region other than** `us-east-1`, you will also need to change your `ami`, since AMI IDs are region specific. Choose an AMI ID specific to your region by [following these instructions](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html#finding-quick-start-ami), and modify `*.tf` with this ID. Then re-run `terraform apply`.
