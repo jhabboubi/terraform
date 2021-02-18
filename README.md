@@ -8,7 +8,7 @@
   - [Terraform vs. Chef, Puppet, etc.](#terraform-vs-chef-puppet-etc)
   - [Installing Terraform - Windows](#installing-terraform---windows)
   - [Installing Terraform - Linux](#installing-terraform---linux)
-  - [Create AWS IAM use](#create-aws-iam-use)
+  - [Create AWS IAM user](#create-aws-iam-user)
   - [Creating credentials file](#creating-credentials-file)
   - [Git init & terraform init](#git-init--terraform-init)
   - [Format and validate the configuration](#format-and-validate-the-configuration)
@@ -20,6 +20,11 @@
   - [Terraform Resources](#terraform-resources)
   - [Terraform Variables](#terraform-variables)
   - [Terraform Provisioner](#terraform-provisioner)
+  - [Perform Dynamic Operations with Functions](#perform-dynamic-operations-with-functions)
+  - [Query Data Sources](#query-data-sources)
+  - [Protect Sensitive Input Variables](#protect-sensitive-input-variables)
+  - [Manage Kubernetes Resources via Terraform](#manage-kubernetes-resources-via-terraform)
+  - [Reuse Configuration with Modules](#reuse-configuration-with-modules)
   - [Links](#links)
   - [Challenges & Workarounds](#challenges--workarounds)
 
@@ -80,7 +85,7 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 - `terraform --version`
 
 
-## Create AWS IAM use
+## Create AWS IAM user
 - Login to [AWS Account](https://aws.amazon.com/account/)
 - Click `Users` on Dashboard then `Add user`
 - Insert a username. Example `terraform`
@@ -191,12 +196,35 @@ Visit [Install Terraform Documentation](https://learn.hashicorp.com/tutorials/te
 - [Provisioners](https://www.terraform.io/docs/language/resources/provisioners/syntax.html)
 
 
+## Perform Dynamic Operations with Functions
+- Find `Create an SSH key and a security group resource`
+- [Perform Dynamic Operations with Functions Link](https://learn.hashicorp.com/tutorials/terraform/functions?in=terraform/configuration-language)
+
+## Query Data Sources
+- [Tutorial Link](https://learn.hashicorp.com/tutorials/terraform/data-sources?in=terraform/configuration-language)
+
+
+## Protect Sensitive Input Variables
+- [Tutorial Link](https://learn.hashicorp.com/tutorials/terraform/sensitive-variables?in=terraform/configuration-language)
+
+
+## Manage Kubernetes Resources via Terraform
+- [Tutorial Link](https://learn.hashicorp.com/tutorials/terraform/kubernetes-provider?in=terraform/kubernetes)
+
+
+## Reuse Configuration with Modules
+- [Tutorials Link](https://learn.hashicorp.com/collections/terraform/modules)
+
+
+
+
 ## Links
 - [SaaS vs PaaS vs IaaS: What’s The Difference & How To Choose](https://www.bmc.com/blogs/saas-vs-paas-vs-iaas-whats-the-difference-and-how-to-choose/)
 - [Terraform deprecated the Chef Provisioner in the 0.13.4 release](https://docs.chef.io/terraform/)
 - [Terraform Cheat Sheet](https://jayendrapatil.com/terraform-cheat-sheet/)
 - [Ansible and HashiCorp: Better Together](https://www.hashicorp.com/resources/ansible-terraform-better-together) [github used in video](https://github.com/scarolan/ansible-terraform)
-- [Manage Kubernetes Resources via Terraform](https://learn.hashicorp.com/tutorials/terraform/kubernetes-provider?in=terraform/kubernetes)
+- [One-click environment creation with Terraform & Ansible in under 10'](https://medium.com/on-the-cloud/one-click-environment-creation-with-terraform-ansible-in-under-10-6e8d9284f60)
+
 
 
 ## Challenges & Workarounds
