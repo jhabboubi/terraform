@@ -67,14 +67,28 @@ resource "aws_eip" "ip" {
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
   keep_locally = false
-}
+} 
 
 resource "docker_container" "nginx" {
   image = docker_image.nginx.latest
   name  = "tutorial"
   ports {
+    internal = 90
+    external = 9000
+  }
+}
+// Docker Resources
+resource "docker_image" "flask" {
+  name         = "habboubi/flaskapp:latest"
+  keep_locally = false
+}
+
+resource "docker_container" "flask" {
+  image = docker_image.flask.latest
+  name  = "flaskapp"
+  ports {
     internal = 80
-    external = 8000
+    external = 80
   }
 }
 
